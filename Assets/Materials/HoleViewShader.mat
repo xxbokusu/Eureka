@@ -62,15 +62,15 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HoleX: 0.75166667
-    - _HoleY: 0.9766667
+    - _HoleX: 0.6791667
+    - _HoleY: 0.9816667
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Radius: 0
     - _ScreenH: 535
-    - _ScreenW: 951
+    - _ScreenW: 856
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
