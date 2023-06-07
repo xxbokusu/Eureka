@@ -1,0 +1,11 @@
+@startuml
+class TiltWindow {
+    + range : Vector2
+    - mTrans : Transform
+    - mStart : Quaternion
+    - mRot : Vector2
+    - Start() : void
+    - Update() : void
+}
+MonoBehaviour <|-- TiltWindow
+@enduml

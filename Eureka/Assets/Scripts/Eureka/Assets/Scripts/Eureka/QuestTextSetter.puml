@@ -1,0 +1,27 @@
+@startuml
+class QuestTextSetter {
+    - <<const>> IMAGE_PATH : string = "pic/person"
+    - _isProgressQuestion : bool
+    - _answerList : List<QuestAnswer>
+    - _nowQuestAnswer : QuestAnswer
+    - _personDic : Dictionary<string, Sprite>
+    - _objDic : Dictionary<_qObj, GameObject>
+    - Awake() : void
+    + isProgressQuestion() : bool
+    + ProgressQuest() : bool
+    + Show() : void
+    + Hide() : void
+    - _SetVisible(isVisible:bool) : void
+    + SetQuest(quest:Quest) : void
+    + getNowQuestAnswer() : QuestAnswer
+    + ShowPerson(answer:QuestAnswer) : bool
+}
+enum _qObj {
+    Questionare,
+    Ans_1,
+    Ans_2,
+    Person,
+}
+"SingletonMonoBehaviour`1" "<QuestTextSetter>" <|-- QuestTextSetter
+QuestTextSetter +-- _qObj
+@enduml

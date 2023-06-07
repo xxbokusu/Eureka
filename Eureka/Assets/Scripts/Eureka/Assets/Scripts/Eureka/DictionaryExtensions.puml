@@ -1,0 +1,5 @@
+@startuml
+class DictionaryExtensions <<static>> {
+    + {static} ElementAtRandom(self:Dictionary<TKey, TValue>) : TValue
+}
+@enduml

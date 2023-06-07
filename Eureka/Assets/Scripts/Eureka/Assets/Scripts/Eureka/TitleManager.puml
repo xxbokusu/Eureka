@@ -1,0 +1,11 @@
+@startuml
+class TitleManager {
+    - _title : GameObject
+    - _startGame : GameObject
+    - Awake() : void
+    + Show() : void
+    + Hide() : void
+    - SetVisible(isVisible:bool) : void
+}
+"SingletonMonoBehaviour`1" "<TitleManager>" <|-- TitleManager
+@enduml

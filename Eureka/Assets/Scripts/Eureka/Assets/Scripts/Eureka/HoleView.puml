@@ -1,0 +1,14 @@
+@startuml
+class HoleView {
+    - DEFAULT_RADIUS_SPEED : float = 0.2f
+    - HIGH_RADIUS_SPEED : float = 0.4f
+    - SUPER_RADIUS_SPEED : float = 1.2f
+    - radiusExpandSpeed : float = 0
+    - Start() : void
+    + SetHole(pos:Vector2, radius:float) : void
+    - Update() : void
+    - _calcRadius(nowRadius:float) : float
+    - _changeRadiusExpandSpeed(radius:float) : void
+}
+MonoBehaviour <|-- HoleView
+@enduml

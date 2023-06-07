@@ -1,0 +1,17 @@
+@startuml
+class DropMe {
+    + containerImage : Image
+    + receivingImage : Image
+    - normalColor : Color
+    + highlightColor : Color
+    + OnEnable() : void
+    + OnDrop(data:PointerEventData) : void
+    + OnPointerEnter(data:PointerEventData) : void
+    + OnPointerExit(data:PointerEventData) : void
+    - GetDropSprite(data:PointerEventData) : Sprite
+}
+MonoBehaviour <|-- DropMe
+IDropHandler <|-- DropMe
+IPointerEnterHandler <|-- DropMe
+IPointerExitHandler <|-- DropMe
+@enduml

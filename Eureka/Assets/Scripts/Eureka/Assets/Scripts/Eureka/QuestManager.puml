@@ -1,0 +1,11 @@
+@startuml
+class QuestManager {
+    - <<const>> IMAGE_PATH : string = "pic/quest"
+    - _imageDic : Dictionary<string, Sprite>
+    - _questImage : GameObject
+    - Awake() : void
+    + ShowRandomImage() : void
+    + ShowImage(quest:Quest) : void
+}
+"SingletonMonoBehaviour`1" "<QuestManager>" <|-- QuestManager
+@enduml

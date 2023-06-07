@@ -1,0 +1,12 @@
+@startuml
+class ChangeColor {
+    - OnEnable() : void
+    + SetRed(value:float) : void
+    + SetGreen(value:float) : void
+    + SetBlue(value:float) : void
+    + OnValueChanged(value:float, channel:int) : void
+    + OnPointerClick(data:PointerEventData) : void
+}
+MonoBehaviour <|-- ChangeColor
+IPointerClickHandler <|-- ChangeColor
+@enduml

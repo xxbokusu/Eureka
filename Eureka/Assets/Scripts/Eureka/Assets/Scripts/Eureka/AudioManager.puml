@@ -1,0 +1,30 @@
+@startuml
+class AudioManager {
+    - <<const>> BGM_VOLUME_KEY : string = "BGM_VOLUME_KEY"
+    - <<const>> SE_VOLUME_KEY : string = "SE_VOLUME_KEY"
+    - <<const>> BGM_VOLUME_DEFULT : float = 0.5f
+    - <<const>> SE_VOLUME_DEFULT : float = 0.5f
+    - <<const>> BGM_PATH : string = "Audio/BGM"
+    - <<const>> SE_PATH : string = "Audio/SE"
+    + <<const>> BGM_FADE_SPEED_RATE_HIGH : float = 1.0f
+    + <<const>> BGM_FADE_SPEED_RATE_LOW : float = 0.3f
+    - _bgmFadeSpeedRate : float
+    - _nextBGMName : string
+    - _nextSEName : string
+    - _isFadeOut : bool = false
+    - _bgmSource : AudioSource
+    - _seSourceList : List<AudioSource>
+    - <<const>> SE_SOURCE_NUM : int = 10
+    - _bgmDic : Dictionary<string, AudioClip>
+    - _seDic : Dictionary<string, AudioClip>
+    - Awake() : void
+    + PlaySE(seName:string, delay:float) : void
+    - DelayPlaySE() : void
+    + PlayBGM(bgmName:string, fadeSpeedRate:float) : void
+    + StopBGM() : void
+    + FadeOutBGM(fadeSpeedRate:float) : void
+    - Update() : void
+    + ChangeVolume(BGMVolume:float, SEVolume:float) : void
+}
+"SingletonMonoBehaviour`1" "<AudioManager>" <|-- AudioManager
+@enduml
