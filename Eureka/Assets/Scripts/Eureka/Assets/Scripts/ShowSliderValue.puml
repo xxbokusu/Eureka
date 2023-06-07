@@ -1,0 +1,6 @@
+@startuml
+class ShowSliderValue {
+    + UpdateLabel(value:float) : void
+}
+MonoBehaviour <|-- ShowSliderValue
+@enduml

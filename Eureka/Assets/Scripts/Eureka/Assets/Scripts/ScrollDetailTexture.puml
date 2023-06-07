@@ -1,0 +1,15 @@
+@startuml
+class ScrollDetailTexture {
+    + uniqueMaterial : bool = false
+    + scrollPerSecond : Vector2
+    - m_Matrix : Matrix4x4
+    - mCopy : Material
+    - mOriginal : Material
+    - mSprite : Image
+    - m_Mat : Material
+    - OnEnable() : void
+    - OnDisable() : void
+    - Update() : void
+}
+MonoBehaviour <|-- ScrollDetailTexture
+@enduml

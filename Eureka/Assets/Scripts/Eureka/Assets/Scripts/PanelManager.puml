@@ -1,0 +1,17 @@
+@startuml
+class PanelManager {
+    + initiallyOpen : Animator
+    - m_OpenParameterId : int
+    - m_Open : Animator
+    - m_PreviouslySelected : GameObject
+    <<const>> - k_OpenTransitionName : string = "Open"
+    <<const>> - k_ClosedStateName : string = "Closed"
+    + OnEnable() : void
+    + OpenPanel(anim:Animator) : void
+    {static} - FindFirstEnabledSelectable(gameObject:GameObject) : GameObject
+    + CloseCurrent() : void
+    - DisablePanelDeleyed(anim:Animator) : IEnumerator
+    - SetSelected(go:GameObject) : void
+}
+MonoBehaviour <|-- PanelManager
+@enduml

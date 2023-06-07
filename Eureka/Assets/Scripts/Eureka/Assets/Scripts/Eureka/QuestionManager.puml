@@ -1,0 +1,15 @@
+@startuml
+class QuestionManager {
+    - _questDic : Dictionary<int, Quest>
+    - _playerAnswerList : List<PlayerQuestAnswer>
+    - Awake() : void
+    - _InitializeQuest() : void
+    - _MakeQuestByReadline(line:string) : Quest
+    + Show() : void
+    + Hide() : void
+    + selectRandomQuest() : Quest
+    + CheckAnswer(reply:bool) : bool
+    + getPlayerAnsList() : List<PlayerQuestAnswer>
+}
+"SingletonMonoBehaviour`1" "<QuestionManager>" <|-- QuestionManager
+@enduml

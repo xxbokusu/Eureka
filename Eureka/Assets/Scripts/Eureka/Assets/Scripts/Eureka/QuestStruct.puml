@@ -1,0 +1,20 @@
+@startuml
+class QuestAnswer <<struct>> {
+    + answer_id : int
+    + quest_id : int
+    + text : string
+    + answer : bool
+    + person : string
+}
+class Quest <<struct>> {
+    + quest_id : int
+    + img_name : string
+    + text : string
+    + quest_type : int
+    + answerList : List<QuestAnswer>
+}
+class PlayerQuestAnswer <<struct>> {
+    + qa : QuestAnswer
+    + isAgree : bool
+}
+@enduml

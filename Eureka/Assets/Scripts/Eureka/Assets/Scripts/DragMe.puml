@@ -1,0 +1,16 @@
+@startuml
+class DragMe {
+    + dragOnSurfaces : bool = true
+    - m_DraggingIcons : Dictionary<int,GameObject>
+    - m_DraggingPlanes : Dictionary<int, RectTransform>
+    + OnBeginDrag(eventData:PointerEventData) : void
+    + OnDrag(eventData:PointerEventData) : void
+    - SetDraggedPosition(eventData:PointerEventData) : void
+    + OnEndDrag(eventData:PointerEventData) : void
+    {static} + FindInParents(go:GameObject) : T
+}
+MonoBehaviour <|-- DragMe
+IBeginDragHandler <|-- DragMe
+IDragHandler <|-- DragMe
+IEndDragHandler <|-- DragMe
+@enduml

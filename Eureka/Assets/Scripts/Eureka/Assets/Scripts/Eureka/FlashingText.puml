@@ -1,0 +1,10 @@
+@startuml
+class FlashingText {
+    - textObject : GameObject
+    - nextTime : float
+    + interval : float = 0.4f
+    - Start() : void
+    - Update() : void
+}
+MonoBehaviour <|-- FlashingText
+@enduml

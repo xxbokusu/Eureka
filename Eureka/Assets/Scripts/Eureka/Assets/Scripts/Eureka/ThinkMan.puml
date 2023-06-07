@@ -1,0 +1,13 @@
+@startuml
+class ThinkMan {
+    - rot_speed : float = 0
+    - DEFAULT_SPEED : float = 3
+    - DEFAULT_SPEED_HIGH : float = 10
+    - Start() : void
+    - Update() : void
+    + YesButtunDown() : void
+    + NoButtunDown() : void
+    + StartGamePush() : void
+}
+MonoBehaviour <|-- ThinkMan
+@enduml

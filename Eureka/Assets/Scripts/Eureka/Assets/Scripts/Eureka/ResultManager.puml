@@ -1,0 +1,32 @@
+@startuml
+class ResultManager {
+    - _objDic : Dictionary<_resObj, GameObject>
+    - _ansList : List<PlayerQuestAnswer>
+    - <<const>> IMAGE_PATH : string = "pic/Person"
+    - _personDic : Dictionary<string, Sprite>
+    + personPrefab : ResultPerson
+    - agreeNum : int = 0
+    - disagreeNum : int = 0
+    - <<const>> POSX : float = 450
+    - <<const>> POSY : float = 279.5f
+    - <<const>> COLUMPERSON : int = 8
+    - <<const>> PERSONSIZE : int = 60
+    - <<const>> SPAN : float = 0.2f
+    - delta : float = 0
+    - Awake() : void
+    + Show() : void
+    + Hide() : void
+    - _SetVisible(isVisible:bool) : void
+    - Update() : void
+    + SetPlayerAnswer(list:List<PlayerQuestAnswer>) : void
+}
+enum _resObj {
+    Sympathy,
+    Originality,
+    SympathySymbol,
+    OriginalitySymbol,
+    Retry,
+}
+"SingletonMonoBehaviour`1" "<ResultManager>" <|-- ResultManager
+ResultManager +-- _resObj
+@enduml

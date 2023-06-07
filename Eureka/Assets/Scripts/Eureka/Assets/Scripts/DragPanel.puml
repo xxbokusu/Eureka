@@ -1,0 +1,15 @@
+@startuml
+class DragPanel {
+    - originalLocalPointerPosition : Vector2
+    - originalPanelLocalPosition : Vector3
+    - panelRectTransform : RectTransform
+    - parentRectTransform : RectTransform
+    - Awake() : void
+    + OnPointerDown(data:PointerEventData) : void
+    + OnDrag(data:PointerEventData) : void
+    - ClampToWindow() : void
+}
+MonoBehaviour <|-- DragPanel
+IPointerDownHandler <|-- DragPanel
+IDragHandler <|-- DragPanel
+@enduml

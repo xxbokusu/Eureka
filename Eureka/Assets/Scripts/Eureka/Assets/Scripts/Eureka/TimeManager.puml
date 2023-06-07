@@ -1,0 +1,15 @@
+@startuml
+class TimeManager {
+    - minute : int
+    - seconds : float
+    - oldSeconds : float
+    - timerText : Text
+    - _timer_on : bool
+    - Awake() : void
+    - Update() : void
+    + IsTimeUp() : bool
+    + IsSecondHalf() : bool
+    + ResetTimer() : void
+}
+"SingletonMonoBehaviour`1" "<TimeManager>" <|-- TimeManager
+@enduml
