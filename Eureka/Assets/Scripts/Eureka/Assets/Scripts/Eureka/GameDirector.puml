@@ -1,0 +1,25 @@
+@startuml
+class GameDirector {
+    - _nowPhase : Phase
+    - _light : GameObject
+    + <<const>> LIMIT_TIME : float = 30
+    - Start() : void
+    + isThinkPhase() : bool
+    + isTeachPhase() : bool
+    + isChkAnsPhase() : bool
+    + isResultPhase() : bool
+    + isTimerOnPhase() : bool
+    + changePhase(newPhase:Phase) : void
+    + ReceiveReply(reply:bool) : void
+    + StartGame() : void
+}
+enum Phase {
+    Title,
+    Think,
+    Teach,
+    ChkAns,
+    Result,
+}
+"SingletonMonoBehaviour`1" "<GameDirector>" <|-- GameDirector
+GameDirector +-- Phase
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class ActiveStateToggler {
+    + ToggleActive() : void
+}
+MonoBehaviour <|-- ActiveStateToggler
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class ResultPerson {
+    - Start() : void
+    - Update() : void
+    + SetPersonImage(personImage:Sprite) : void
+}
+MonoBehaviour <|-- ResultPerson
+@enduml

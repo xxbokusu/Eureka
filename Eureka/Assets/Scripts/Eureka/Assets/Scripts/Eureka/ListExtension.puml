@@ -1,0 +1,12 @@
+@startuml
+class ListExtension <<static>> {
+    + {static} AddToNotDuplicate(list:List<T>, t:T) : void
+    + {static} RemoveDuplicate(list:List<T>) : void
+    + {static} Shuffle(list:List<T>) : List<T>
+    + {static} GetAndRemove(list:List<T>, targetNo:int) : T
+    + {static} Pop(list:List<T>) : T
+    + {static} Dequeue(list:List<T>) : T
+    + {static} GetAtRandom(list:List<T>) : T
+    + {static} GetAndRemoveAtRandom(list:List<T>) : T
+}
+@enduml
